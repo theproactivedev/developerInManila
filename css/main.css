@@ -1,0 +1,704 @@
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ======================
+GENERAL
+====================== */
+
+body {
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: 100%;
+  background-color: #fff;
+  color: #999;
+}
+
+h1 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+}
+
+span {
+  display: block;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+.button_sliding_bg {
+  color: #31302B;
+  background: #FFF;
+  padding: 12px 17px;
+  margin: 25px;
+  border: 3px solid #31302B;
+  font-size: .875em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #31302B;
+  -webkit-transition: all ease 0.9s;
+  -moz-transition: all ease 0.9s;
+  transition: all ease 0.9s;
+}
+
+.button_sliding_bg:hover {
+  box-shadow: inset 240px 0 0 0 #31302B;
+  color: #fff;
+}
+
+.sliding-middle-out {
+/*	display: inline-block;*/
+	position: relative;
+/*	padding-bottom: 3px;*/
+}
+.sliding-middle-out:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+.sliding-middle-out:hover:after {
+	width: 100%;
+	background: #ff000a;
+}
+
+.body {
+  color: #1d1d1d;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.body p {
+  text-align: left;
+  padding: 10px 5px 0;
+}
+
+.body h1 {
+  font-size: 1.25em;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.body h2 {
+  font-size: 1.1em;
+  font-family: 'Roboto Slab', serif;
+  color: #c73434;
+  font-weight: bold;
+}
+
+.image div {
+  margin: 10px auto;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+.quotes {
+  font-family: 'Parisienne', cursive;
+  text-align: center;
+}
+
+/* ======================
+HEADER
+====================== */
+
+header {
+  width: 100%;
+  background: #1d1d1d;
+  box-sizing: border-box;
+}
+
+#logo {
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.25em;
+}
+
+#logo:hover {
+  color: #ddd;
+}
+
+/***********
+NAVIGATION
+***********/
+nav {
+  text-align: center;
+  width: 100%;
+  background: #656565;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  font-weight: 700;
+  padding: 10px;
+  display: block;
+}
+
+nav .sliding-middle-out:hover:after {
+  background: #fff;
+}
+
+nav a,
+nav a:visited {
+  color: #ddd;
+}
+
+nav a.selected,
+nav a:hover {
+  color: #fff;
+}
+
+/*==============================
+HOME
+==============================*/
+
+.main {
+  background: #000 url('../assets/office-desk.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+  box-sizing: border-box;
+}
+
+#welcome-message {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  height: 100vh;
+  padding: 5px 2px;
+  box-sizing: border-box;
+}
+
+.message {
+  padding-top: 20%;
+}
+
+.message h1 {
+  color: #c73434;
+  font-size: 1.5em;
+  text-align: center;
+  padding-bottom: 5px;
+  border-bottom: 2px solid;
+  margin-bottom: 10px;
+}
+
+.message p {
+  color: #1d1d1d;
+  font-size: 1em;
+}
+
+.message a[href="contact.html"] {
+  background-color: transparent;
+}
+
+#tagline {
+  font-size: 1.1em;
+  font-family: 'Roboto Slab', serif;
+  color: #31302B;
+  padding-bottom: 10px;
+}
+
+#tagline span {
+  color: #c73434;
+  font-style: italic;
+  font-weight: 700;
+}
+
+/*==============================
+EMAIL CATCHER
+==============================*/
+.email-catcher {
+  background-color: #c73434;
+  width: 100%;
+  color: #fff;
+  padding: 15px 2px 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+form p {
+  font-family: 'roboto slab', serif;
+  display: block;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="submit"] {
+  outline: 0;
+  border: none;
+  height: auto;
+  color: #1d1d1d;
+  border-radius: .3em;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.08) inset;
+  font-family: 'roboto slab', serif;
+  font-size: 0.8em;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  padding: 0;
+  padding: 7px;
+  background-color: transparent;
+  border: 3px solid #ddd;
+  color: #ddd;
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  border: 3px solid #fff;
+  color: #fff;
+}
+
+.email-catcher span {
+  font-size: 0.9em;
+}
+
+/*==============================
+HOME
+==============================*/
+
+#web div {
+  background: url('../assets/web.gif') no-repeat center;
+  background-size: contain;
+}
+
+#marketing div {
+  background: url('../assets/smm.gif') no-repeat center;
+  background-size: contain;
+}
+
+/*==============================
+WEB DEV'T
+==============================*/
+.web {
+  background: #000 url('../assets/technology.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+}
+
+#projects p.quotes,
+#about p.quotes {
+  font-size: 2em;
+  text-align: center;
+}
+
+#bukopie div {
+  background: url('../assets/mobile.gif') no-repeat center;
+  background-size: contain;
+}
+
+#html5 div {
+  background: url('../assets/html5.gif') no-repeat center;
+  background-size: contain;
+}
+
+#bukopie a:hover {
+  color: #c73434;
+}
+
+/*==============================
+ABOUT
+==============================*/
+.about {
+/*  bottom: -300px;*/
+  background: #000 url('../assets/about.png') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+}
+
+#school div {
+  background: url('../assets/about-stud.gif') no-repeat center;
+  background-size: contain;
+}
+
+#company div {
+  background: url('../assets/about-company.gif') no-repeat center;
+  background-size: contain;
+}
+
+/*==============================
+CONTACT
+==============================*/
+.contact {
+  background: #000 url('../assets/talk.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+}
+
+#talk img {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin-right: 10px;
+  border: 3px solid;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+  margin: 0 auto 5px;
+}
+
+/*==============================
+FOOTER
+==============================*/
+footer {
+  padding: 20px 0;
+  text-align: center;
+  border-top: 2px solid #c73434;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1em;
+  margin-top: 40px;
+}
+
+footer ul {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+footer ul a {
+  font-family: 'Roboto Slab', serif;
+  padding: 10px 20px;
+  display: block;
+}
+
+footer ul a,
+footer ul a:visited {
+  color: #1d1d1d;
+}
+
+footer .sliding-middle-out:hover:after {
+  background: #1d1d1d;
+}
+
+footer p {
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+/*==============================
+CLEARFIX
+==============================*/
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*==============================
+MEDIA QUERIES
+==============================*/
+
+@media screen and (min-width: 400px) {
+  footer ul li {
+    float: left;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .image div {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .message {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .body {
+    padding: 0;
+    padding: 0 15px;
+    width: 90%;
+    box-sizing: border-box;
+  }
+  
+  .image div {
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    float: left;
+    background: #1d1d1d;
+    margin-bottom: 60px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+  }
+  
+  nav {
+    background: none;
+    float: right;
+    font-size: 1em;
+    margin-right: 5%;
+    text-align: right;
+    width: 45%;
+    line-height: 1.4;
+  }
+  
+  #logo {
+    float: left;
+    margin-left: 5%;
+    text-align: left;
+    width: 45%;
+    line-height: 1.2;
+    font-size: 2em;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  h2 {
+    font-size: 0.825em;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .message {
+    width: 40%;
+  }
+  
+  .body {
+    width: 90%;
+    font-size: 1.05em;
+  }
+  
+  .body p {
+    padding: 0;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="submit"]{
+    width: 25%;
+    display: inline;
+  }
+  
+  .image {
+    position: relative;
+  }
+  
+  .image div {
+    height: 300px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  #web section,
+  #company section,
+  #html5 section {
+    width: 47.5%;
+    clear: both;
+    float: left;
+  }
+  
+  #marketing section,
+  #school section,
+  #bukopie section {
+    width: 47.5%;
+    float: right;
+    clear: both;
+  }
+  
+  #html5 section,
+  #bukopie section {
+    width: 70%;
+  }
+
+  #web div,
+  #company div,
+  #html5 div {
+    background-position: right top;
+    position: absolute;
+    width: 50%;
+    top: 0;
+    right: 0;
+    margin-left: 2.5%;
+  }
+
+  #marketing div,
+  #school div,
+  #bukopie div {
+    background-position: left top;
+    margin-right: 2.5%;
+    position: absolute;      
+    width: 50%;
+    top: 0;
+    left: 0;
+  }
+  
+  #html5 div,
+  #bukopie div {
+    width: 30%;
+  }
+  
+  #talk img {
+    margin: 0;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    float: left;
+  }
+  
+  #talk img.right {
+    float: right;
+    margin-left: 10px;
+  }
+  
+  #talk p {
+    margin-top: 10px;
+  }
+ 
+}
+
+@media screen and (min-width: 840px) {
+  .body {
+    width: 85%;
+  }
+  
+  .body h1 {
+    font-size: 1.75em;
+    margin-bottom: 15px;
+  }
+  
+  .body h2 {
+    font-size: 1.4em;
+  }
+  
+  #projects p.quotes,
+  #about p.quotes {
+    padding-top: 10px;
+    font-size: 2.5em;
+  }
+  
+  .image {
+    height: 380px;
+  }
+  
+  #school {
+    height: 430px;
+  }
+}
+
+@media screen and (min-width: 1150px){
+  nav {
+    line-height: 3;
+  }
+  
+  #logo {
+    font-size: 2em;
+  }
+  
+  .message {
+    width: 30%;
+    padding-top: 15%;
+    font-size: 1.1em;
+  }
+  
+  .body {
+    width: 75%;
+  }
+
+  .image div,
+  .image {
+    height: 400px;
+  }
+  
+  .image {
+    padding-bottom: 40px;
+  }
+  
+  #web div,
+  #company div,{
+    max-width: 500px;
+  }
+
+  #marketing div,
+  #school div {
+    max-width: 500px;
+  }
+  
+}
+
+@media screen and (min-width: 1366px) {
+  nav {
+    padding-left: 0;
+    margin-left: 0;
+  }
+}
